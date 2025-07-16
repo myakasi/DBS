@@ -85,3 +85,4 @@ df.write.saveAsTable("dbs.Sales")
 
 # COMMAND ----------
 
+select * from dbs.Sales
