@@ -86,3 +86,18 @@ df.write.saveAsTable("dbs.Sales")
 # COMMAND ----------
 
 select * from dbs.Sales
+
+# COMMAND ----------
+
+dfp = spark.read.parquet("/Volumes/workspace/dbs/dbs_volume/titanic.parquet")
+
+
+# COMMAND ----------
+
+dfp.write.saveAsTable("dbs.Titnic_Parquet")
+
+
+# COMMAND ----------
+
+# MAGIC %sql
+# MAGIC select * from dbs.titnic_parquet
